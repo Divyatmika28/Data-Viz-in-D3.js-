@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+      <script>
+         var v; //variable declaration, v = undefined
+          v = 'a'; //variable initialization
+          var v = 'a'; //declaration with initialization
+          // Dynamic typing of primitive types
+          var foo = true; //Boolean
+          var foo = null; //Null
+          var foo = undefined; //Undefined
+          var foo = 2.3; //Number
+          var foo = 'bar' //String, specified using '' or ""
+          var arr = ['tree', 1765, [0, 1, 2]]; //array
+          arr[0] //access first element in array (indices starts at 0)
+          var obj = {first: 'Joseph', last: 'Priestley'}; //object literal
+          console.log(obj.first + ' ' + obj['last']); //+ concatenates Strings, "." notation preferred
+          for (i = 0; i < arr.length; i++) { console.log(arr[i]); } //for loop to iterate over an array
+          if (true) { console.log('true'); } else { console.log('wrong'); } //conditional statement
+          function add1(a, b) { return a + b; } //function declaration, no ';' at the end
+          var add2 = function(a, b) { return a + b; }; //function expression, with ';' at the end!
+          var sum1 = add1(1, 2); //function call
+
+          //function taking first and last name as parameters 
+          var arr = ['Divyatmika', 'Lnu'];
+          function name(a,b) {return a + ' ' + b;}
+         console.log('My full name is '+ name(arr[0], arr[1]));
+
+         //Create name1 as a function declaration and name2 as a function expression with the same body as name
+         function name1(a,b) {return a + ' ' + b;}
+         function name2(a,b) {return a + ' ' + b;}
+
+          //person1 array 
+          var person1 = ['Divyatmika', 'Lnu', name1];
+          //person 2 object 
+          var person2 = {first: 'Divyatmika', last: 'Lnu', fn: name2};
+
+          //Create a function assertSame with parameters name1, name2, a, b and returning true if both name1 and name2 return the same
+          //results when called with a, b as parameters.
+          function assertSame(name1, name2, a,b)
+          {
+              if(name1(a,b)==name2(a,b))
+                 return true; 
+          }
+          //Use console.log and assertSame to test that name1 and name2 return the same value when called with your rst and last name.
+          console.log(assertSame(name1,name2,'Divyatmika','Lnu'));
+          
+
+
+
+
+         
+         
+      </script>
+ 
+</head>
+
+  <body>
+
+  </body>
+</html>

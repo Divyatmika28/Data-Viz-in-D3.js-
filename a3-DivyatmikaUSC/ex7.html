@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+
+<title>ex7</title>
+
+</head>
+
+<body>
+
+<h1 align="center">INF-554: Assignment 3</h1>
+
+
+<script type="text/javascript">
+
+    var dataset =[{ width: "200px", label: "Category 1 (200)" },
+{ width: "150px", label: 'Category 2 (150)'},
+{ width: "300px", label: 'Category 3 (300)'},
+{ width: "700px", label: 'Category 4 (700)'}];
+    d3.select('body')
+        .selectAll('div')
+        .data(dataset)
+        .enter()
+        .append('div')
+        .text(function(d) { return d.label; })
+        .style("font-size","18px")
+        .style("color", "white")
+        .style("background-color","blue")
+        .style("width",function(d) { return d.width;})
+        .style("height","20px")
+        .style("text-align", "right")
+        .style("border", "5px solid green")
+        .style("margin-bottom", "2px");
+</script>
+
+</body>
+</html>

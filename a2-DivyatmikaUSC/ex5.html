@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+        <h1>What is output when run?</h1>
+       <h2> The answer is "ƒ exampleReturned(innerArg) {
+            return ((arg1 + arg2) / (localVar + innerArg));
+            }"</h2>
+      <script>
+         
+        function exampleClosure(arg1, arg2) {
+        var localVar = 2;
+        function exampleReturned(innerArg) {
+        return ((arg1 + arg2) / (localVar + innerArg));
+        }
+        return exampleReturned;
+        }
+        var globalVar = exampleClosure(2, 4);
+        console.log(globalVar);
+        globalVar(4);
+
+      </script>
+ 
+</head>
+
+  <body>
+
+  </body>
+</html>

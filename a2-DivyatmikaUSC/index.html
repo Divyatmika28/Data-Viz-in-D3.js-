@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Fertilty Rate for countries for Five Years </title>
+</head>
+<body>
+        <h1 style="font-family:comic sans ms;"> <font color= "Brown">INF 554 Assignment 2 </font ></h1>
+    <h2>Visualisation for depicting fertility rate in women in periods of 5 years</h2>
+    <p>
+         <a href="http://data.un.org/Data.aspx?q=fertility+rate&d=PopDiv&f=variableID%3a54">UN Population Division Data</a> is the source dataset from which "Fertility Rate" (live births per woman) is depcited for 10 countries.
+</p>
+<p style="font-family:comic sans ms;"> This web page displays 3 bubble cloud created on a small dataset obtained from united nations' website that tells us some details about the fertility rate in women in periods of 5 years. The dataset obtained is formatted to remove errors and fill missing data if any. 
+Here's the link to the  <a href="http://data.un.org/Data.aspx?q=fertility+rate&d=PopDiv&f=variableID%3a54&c=2,4,6,7&s=_crEngNameOrderBy:asc,_timeEngNameOrderBy:desc,_varEngNameOrderBy:asc&v=1">dataset</a>  </p>
+        
+<br>
+<h3 style="font-family:courier;"> The 3 cloud created are through different processes using SVG and Javscript. </h3>
+<ol>
+        <li style="font-family:courier;">A picture of the Bubble Chart created from the data using inkscape. </li>
+        <br>
+    <img src="drawing.png" width="400" height="400">
+    <br>
+    <li style="font-family:courier;">A line chart depicting Life Expectancy and Fertility Rate for 2015 using Google Chart. </li>
+        <head>
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <script type="text/javascript">
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+            
+                  function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Life Expectancy', 'Fertility Rate',      'Population in millions'],
+        ['Albania',    69.1,              2.44,        258.162],
+        ['Algeria',    76.9,              2.21,              125.890],
+        ['Australia',    82.5,               1.83,               23.789],
+        ['Asia',    71.3,              3.31,         93.778],
+        ['Afghanistan',    60.7,              4.65,                 33.736],
+        ['Bahamas',    68.4,              2.94,          101.716],
+        ['Bangladesh',    83.4,              1.62,          46.447],
+        ['Angola',    74.6,              1.5,        68.65],
+        ['Argentina',    57.4,               2.34,               55],
+        ['Africa',    59.2,              3.86,       15.77]
+                    ]);
+            
+                    var options = {
+                      title: 'Fertility Rate for year 2015 showing population in millions',
+                      curveType: 'none',
+                      legend: { position: 'bottom' }
+                    };
+            
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+            
+                    chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="curve_chart" style="width: 900px; height: 500px"></div>
+              </body>
+                                    
+        <li style="font-family:courier;">Bubble cloud created using Javascript </li>
+        <br>
+        <svg id="Chart" width="1000px" height="1000px">
+       </svg>   
+        <script src="chart.js"></script> 
+        
+       
+    
+
+        
+        
+        
+
+</ol>
