@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Assignment 7 </title>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <link rel="stylesheet" href="./node_modules_a7/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" type="a7style.css" >
+
+
+</head>
+
+<body>
+  <center><h1>Total Fertility Rate (Live births per woman) in 1960-1965! </h1></center>
+
+<br>
+
+        <p> I have used the Total Fertility Rate from the
+          <a href="http://data.un.org/Data.aspx?q=fertility+rate&d=PopDiv&f=variableID%3a54">UN Data website.</a>
+          
+          The dataset consists of countries and their fertility rates over 5 years.
+         I have implemented the following functionalities- 
+        <ul>
+          <li>Sorted countries alphabetically. </li>
+          <li>Showed all 10 countries in current sorting order.</li>
+          <li>Showed top 5 countries by value by keeping current sorting order.</li>
+          <li>Showed bottom 5 countries by value, keeping current sorting order.</li>
+          <li>Sorted countries alphabetically.</li>
+          <li>Sorted in ascending order by value</li>
+          <li>Sorted in descending order by value</li>
+        </ul>
+        </p>
+
+<br>
+
+  <h2>D3 bar chart</h2>
+<p>
+This is a bar chart showing all 10 countries sorted alphabetically by default.
+
+</p>
+
+<br>
+
+    <p>For Countries:
+        <button class="btn btn-default" id="res">RESET</button>
+        <button class="btn btn-default" id="all">ALL </button>
+        <button class="btn btn-default" id="top">TOP 5</button>
+        <button class="btn btn-default" id="bot">BOTTOM 5</button>
+
+    </p>
+    <p>Sort by:
+        <button class="btn btn-default" id="alpha">Alphabetical</button>
+        <button class="btn btn-default" id="ascend">Ascending</button>
+        <button class="btn btn-default" id="descen">Descending</button>
+
+    </p>
+
+    <div id="chart"></div>
+
+
+<script src = "a7.js"></script>
+
+<script src="./node_modules_a7/d3/dist/d3.min.js"></script>
+<script src="./node_modules_a7/jquery/dist/jquery.slim.min.js"></script>
+<script src="./node_modules_a7/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

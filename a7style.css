@@ -1,0 +1,60 @@
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: serif;
+    font-size: 14px;
+}
+
+.bar {
+    fill:#46B4AF;
+}
+
+.bar:hover {
+    fill:#F47F42;
+}
+
+text.xlabel {
+    font-family: serif;
+    font-size: 28px;
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+text.ylabel {
+    font-family: serif;
+    font-size: 28px;
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+text.name {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 14px;
+    fill: black;
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+#temp,
+#grav,
+#dist {
+    background-color: whitesmoke;
+}
+
+p {
+    font-size: 16px;
+}
+
+#temp:hover,
+#grav:hover,
+#dist:hover {
+    text-decoration: overline;
+}
